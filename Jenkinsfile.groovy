@@ -13,9 +13,6 @@ node {
         
     }
     stage("Send Email"){
-        mail bcc: '', body: '''Hello,
-        Requested AMI is ready to use.
-        Thanks.''', cc: '', from: '', replyTo: '', subject: 'Golden AMI has been built', to: 'bkarakasu@gmail.com'
-        
+        mail bcc: '', body: '''Hello, Requested AMI is ready to use. Thanks.''', cc: '', from: '', replyTo: '', subject: 'Golden AMI has been built', to: 'bkarakasu@gmail.com'
     }
 }
