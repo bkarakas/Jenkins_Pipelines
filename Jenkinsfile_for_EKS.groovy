@@ -1,16 +1,20 @@
 node{
     stage("pull Repo"){
-        git'https://github.com/bkarakas/terraform-iaac-eks-burak.git'
+        git 'https://github.com/bkarakas/terraform-iaac-eks-burak.git'
 
     }
      stage("stage1"){
          echo "Hello"
         
-    } stage("stage1"){
+    } 
+    
+    stage("stage1"){
         echo "Hello"
         
-    } stage("stage1"){
+    } 
+    
+    stage("stage1"){
         echo "Hello"
-        
+
     }
 }
