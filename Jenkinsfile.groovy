@@ -9,11 +9,13 @@ node {
         sh "packer build -var region=${AMI_REGION} tools/jenkins_example.json"
     }
     stage("Send Notification to Slack"){
-        echo "Hello"
+        slackSend channel: 'nagios_alerts', message: 'Golden AMI has been built'
         
     }
     stage("Send Email"){
-        echo "Hello"
+        mail bcc: '', body: '''Hello,
+        Requested AMI is ready to use.
+        Thanks.''', cc: '', from: '', replyTo: '', subject: 'Golden AMI has been built', to: 'bkarakasu@gmail.com'
         
     }
 }
