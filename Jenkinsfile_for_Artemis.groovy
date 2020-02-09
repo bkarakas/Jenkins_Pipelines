@@ -71,11 +71,10 @@ node {
         mail bcc: '', 
         body: '''Hello,
         Artemis application ${Version} has been deployed to $(ENVIR).
-        Thanks.
-        ''', 
+        Thanks.''', 
         cc: '', 
         from: '', 
         replyTo: '', 
-        subject: 'Application Deployment', 
-        to: 'bkarakasu@gmail.com'
+        subject: 'Artemis application', 
+        to: '${EMAIL}'
 }
