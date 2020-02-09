@@ -13,24 +13,24 @@ node {
             'version/0.8', 
             'version/0.9', 
             'version/0.10'], 
-            description: 'Which version of the app should I deploy?', 
-            name: 'VERSION'), 
+        description: 'Which version of the app should I deploy?', 
+        name: 'VERSION'), 
             choice(choices: 
             [
             'dev1.burakkarakas.net', 
             'qa1.burakkarakas.net', 
             'stage1.burakkarakas.net', 
             'prod1.burakkarakas.net'], 
-            description: 'Please provide the environment to build the application!', 
-            name: 'ENVIR'), 
+        description: 'Please provide the environment to build the application!', 
+        name: 'ENVIR'), 
             choice(choices: 
             [
             'burakdevops@gmail.com ', 
             'burakdevops1@gmail.com', 
             'burakdevops2@gmail.com', 
             'burakdevops3@gmail.com'], 
-            description: 'Please choose the email to send notifications!', 
-            name: 'EMAIL')])])
+        description: 'Please choose the email to send notifications!', 
+        name: 'EMAIL')])])
 
 	stage("Stage1"){
 		timestamps {
