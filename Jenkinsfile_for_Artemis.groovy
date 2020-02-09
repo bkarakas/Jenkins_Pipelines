@@ -77,4 +77,5 @@ node {
         replyTo: '', 
         subject: 'Artemis application', 
         to: '${EMAIL}'
+    }
 }
