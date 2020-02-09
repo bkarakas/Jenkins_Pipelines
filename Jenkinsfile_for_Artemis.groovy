@@ -22,7 +22,15 @@ node {
 		'stage1.burakkarakas.net', 
 		'prod1.burakkarakas.net'], 
 	description: 'Please provide an environment to build the application', 
-	name: 'ENVIR')])])
+	name: 'ENVIR')
+    choice(choices: 
+	[
+		'burakdevops@gmail.com', 
+		'burakdevops1@gmail.com', 
+		'burakdevops2@gmail.com', 
+		'brakdevops3@gmail.com'], 
+	description: 'Please choose the email to send notifications', 
+	name: 'EMAIL')])])
 
 	stage("Stage1"){
 		timestamps {
@@ -72,7 +80,7 @@ node {
 			}
 		}
 	}
-    
+
     stage("Send Email Notification"){
         mail bcc: '', 
         body: '''Hello,
