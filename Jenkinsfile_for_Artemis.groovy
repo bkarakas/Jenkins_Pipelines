@@ -28,7 +28,7 @@ node {
 		'burakdevops@gmail.com', 
 		'burakdevops1@gmail.com', 
 		'burakdevops2@gmail.com', 
-		'brakdevops3@gmail.com'], 
+		'burakdevops3@gmail.com'], 
 	description: 'Please choose the email to send notifications', 
 	name: 'EMAIL')])])
 
