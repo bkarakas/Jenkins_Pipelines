@@ -1,36 +1,36 @@
 node {
 	properties(
-		[parameters(
-		[choice(choices: 
-		[
-		'version/0.1', 
-		'version/0.2', 
-		'version/0.3', 
-		'version/0.4', 
-		'version/0.5',
-        'version/0.6',
-        'version/0.7',
-        'version/0.8',
-        'version/0.9',
-        'version/0.10'], 
-	description: 'Which version of the app should I deploy? ', 
-	name: 'Version'), 
-	choice(choices: 
-	[
-		'dev1.burakkarakas.net', 
-		'qa1.burakkarakas.net', 
-		'stage1.burakkarakas.net', 
-		'prod1.burakkarakas.net'], 
-	description: 'Please provide an environment to build the application', 
-	name: 'ENVIR')
-    choice(choices: 
-	[
-		'burakdevops@gmail.com', 
-		'burakdevops1@gmail.com', 
-		'burakdevops2@gmail.com', 
-		'burakdevops3@gmail.com'], 
-	description: 'Please choose the email to send notifications', 
-	name: 'EMAIL')])])
+        [parameters(
+            [choice(choices: 
+            [
+            'version/0.1', 
+            'version/0.2', 
+            'version/0.3', 
+            'version/0.4', 
+            'version/0.5', 
+            'version/0.6', 
+            'version/0.7', 
+            'version/0.8', 
+            'version/0.9', 
+            'version/0.10'], 
+            description: 'Which version of the app should I deploy?', 
+            name: 'VERSION'), 
+            choice(choices: 
+            [
+            'dev1.burakkarakas.net', 
+            'qa1.burakkarakas.net', 
+            'stage1.burakkarakas.net', 
+            'prod1.burakkarakas.net'], 
+            description: 'Please provide the environment to build the application!', 
+            name: 'ENVIR'), 
+            choice(choices: 
+            [
+            'burakdevops@gmail.com ', 
+            'burakdevops1@gmail.com', 
+            'burakdevops2@gmail.com', 
+            'burakdevops3@gmail.com'], 
+            description: 'Please choose the email to send notifications!', 
+            name: 'EMAIL')])])
 
 	stage("Stage1"){
 		timestamps {
