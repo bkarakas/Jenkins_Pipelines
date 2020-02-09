@@ -23,6 +23,7 @@ node {
 		'prod1.burakkarakas.net'], 
 	description: 'Please provide an environment to build the application', 
 	name: 'ENVIR')])])
+
 	stage("Stage1"){
 		timestamps {
 			ws {
@@ -30,6 +31,7 @@ node {
 		}
 	}
 }
+
 	stage("Install Prerequisites"){
 		timestamps {
 			ws{
@@ -41,6 +43,7 @@ node {
 		}
 	}
 }
+
 	stage("Copy Artemis"){
 		timestamps {
 			ws {
@@ -50,6 +53,7 @@ node {
 		}
 	}
 }
+
 	stage("Run Artemis"){
 		timestamps {
 			ws {
@@ -59,6 +63,7 @@ node {
 		}
 	}
 }
+
 	stage("Send slack notifications"){
 		timestamps {
 			ws {
@@ -67,6 +72,7 @@ node {
 			}
 		}
 	}
+    
     stage("Send Email Notification"){
         mail bcc: '', 
         body: '''Hello,
