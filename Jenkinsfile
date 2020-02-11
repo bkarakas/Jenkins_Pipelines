@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
           steps {
-            sh '''acho "Hello"
+            sh '''echo "Hello"
 '''
           }
         }
